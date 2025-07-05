@@ -36,6 +36,7 @@ class eventManage{
         sort(events[date].begin(), events[date].end());
 
         cout<<"Event added."<<endl;
+        cout<<endl;
     }
 
 
@@ -70,6 +71,7 @@ class eventManage{
                 entry = eventList.erase(entry);  // erase returns the next iterator
                 found = true;
                 cout<<"Event deleted successfully."<<endl;
+                cout<<endl;
                 break; // exit loop as event found and deleted
 
             } else {
@@ -83,6 +85,7 @@ class eventManage{
             
         if (found == false) {
             cout << "Event not found." << endl;
+            cout<<endl;
         }
     }
     
@@ -116,6 +119,7 @@ class eventManage{
             
             cout<< entry->first << " -> "<< entry->second <<endl;
         }
+        cout<<endl;
     }
 };
 
@@ -126,6 +130,7 @@ void enterCommands(eventManage &section){
                 string command;
                 cout << "Choose an action: add / delete / update / view / exit: ";
                 cin >> command;
+                cout<<endl;
                 transform(command.begin(), command.end(), command.begin(), ::tolower);
 
                 if (command == "add") {
@@ -162,6 +167,7 @@ int main(){
         string section;
         cout<< "choose a section from: trading / office / home / exit: ";
         cin>> section;
+        cout<<endl;
         transform(section.begin(), section.end(), section.begin(), ::tolower);
 
         if(section == "office"){
